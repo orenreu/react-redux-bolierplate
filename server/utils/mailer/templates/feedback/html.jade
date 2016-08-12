@@ -1,0 +1,40 @@
+extends ../layout.jade
+
+block title
+    title Someone Sent Feedback
+
+block content
+    table(cellpadding='10' width="600")
+        tr
+            td(valign='top')
+                .title(style='font-weight:700;color:#1d1f21;font-size:25px;line-height:32px') Someone sent feedback
+        tr
+            td.spacer-row-small(colspan='3')
+        tr
+            td(valign='top')
+                .p(style='text-align:center;')
+                    | Someone sent you feedback for Webscope!
+
+
+        tr
+            td.spacer-row-small(colspan='3')
+        tr
+            td(valign='top' style="width:570;")
+                table(align='center', width='400', cellspacing='0', cellpadding='0', border='0' style="margin:auto;")
+                    tr
+                        td Rating:
+                        td= data.rating
+                    tr
+                        td Name:
+                        td= data.name
+                    tr
+                        td Email:
+                        td= data.email
+                    tr
+                        td Message:
+                        td= data.message
+
+        tr
+            td.spacer-row-small(colspan='3')
+        tr
+            td.spacer-row(colspan='3')

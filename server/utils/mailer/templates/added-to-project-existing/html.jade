@@ -1,0 +1,32 @@
+extends ../layout.jade
+
+block title
+    title Someone has added you to Webscope
+
+block content
+    table(cellpadding='10')
+        tr
+            td(valign='top')
+                .title(style='font-weight:700;color:#1d1f21;font-size:25px;line-height:32px') Welcome to Webscope
+        tr
+            td.spacer-row-small(colspan='3')
+        tr
+            td(valign='top')
+                .p
+                    | Someone has added you to a project on Webscope!
+                    | Click on the following link to go to Webscope and see the project.
+
+
+        tr
+            td.spacer-row-small(colspan='3')
+        tr
+            td(valign='top')
+                table.button-table(align='center', width='250', cellspacing='0', cellpadding='0', border='0')
+                    tr
+                        td.button(colspan='3', align='center' style='padding:10px 30px')
+                            a(href=""+data.link)
+                                button(style='border:0;padding:10px;cursor:pointer;background:#1d1f21;color:#fff;font-weight:500;border-radius:5px;text-decoration:none;font-size:18px;font-family:HelveticaNeue,"Helvetica Neue",HelveticaNeueRoman,HelveticaNeue-Roman,"Helvetica Neue Roman",Helvetica,Tahoma,Geneva,Arial,sans-serif') Go to Webscope
+        tr
+            td.spacer-row-small(colspan='3')
+        tr
+            td.spacer-row(colspan='3')

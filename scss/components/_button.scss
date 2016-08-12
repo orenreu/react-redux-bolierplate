@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.btn.full-width-btn {
+  width: 100%;
+}
+
+.btn-facebook {
+
+  background-color: rgb(59, 89, 152);
+  color: white;
+  border-radius: 6px;
+  padding: 5px 20px;
+  text-transform: none;
+
+
+  .fa {
+    font-size: 1.5em;
+  }
+
+  @include on-event(){
+    background-color: rgb(59, 89, 152) !important;
+    color: white;
+  }
+}
+
+
