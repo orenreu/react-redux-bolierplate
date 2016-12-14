@@ -19,7 +19,8 @@ function mapStateToProps(state) {
         message: state.message,
         imageUpload: state.imageUpload,
         projectsList: state.projectsList,
-        errors: state.errors
+        errors: state.errors,
+        user: state.user
     }
 }
 

@@ -1,1 +1,1 @@
-# Porn Book Club
+# React Redux Boilerplate

@@ -9,10 +9,12 @@ import * as auth from './auth'
 import * as message from './message'
 import * as imageUpload from './imageUpload'
 import * as errors from './errors'
+import * as user from './user'
 
 
 export default Object.assign({},
     auth,
     message,
     imageUpload,
-    errors)
+    errors,
+    user)

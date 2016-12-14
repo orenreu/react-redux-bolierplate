@@ -15,7 +15,7 @@ module.exports = new winston.Logger({
             handleExceptions: true,
             humanReadableUnhandledException: true
         }),
-        new (winston.transports.File)({filename: 'pornbookclub.log'})
+        new (winston.transports.File)({filename: 'boilerplate.log'})
     ],
     exceptionHandlers: [
         new winston.transports.File({

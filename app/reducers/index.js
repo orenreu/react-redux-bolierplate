@@ -12,6 +12,7 @@ import auth from './auth'
 import message from './message'
 import imageUpload from './imageUpload'
 import errors from './errors'
+import user from './user'
 
 
 const rootReducer = combineReducers({
@@ -19,6 +20,7 @@ const rootReducer = combineReducers({
     message,
     imageUpload,
     errors,
+    user,
     routing: routerReducer})
 
 

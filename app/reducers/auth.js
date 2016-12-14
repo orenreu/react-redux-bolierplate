@@ -27,32 +27,6 @@ function auth(state = defaultState, action) {
         case types.LOGIN_FAILURE:
             return state
 
-        case types.RECEIVE_USER:
-            return {
-                ...state,
-                user: action.user
-            }
-
-        case types.RECEIVE_USER_FAILURE:
-            return state
-
-
-        case types.REQUEST_TOGGLE_ONBOARDING:
-            return {
-                ...state,
-                user: {
-                    ...state.user,
-                    onBoarding:!state.user.onBoarding
-                }
-            }
-
-        case types.TOGGLE_ONBOARDING_SUCCESS:
-            return state
-
-
-        case types.TOGGLE_ONBOARDING_FAILURE:
-            return state
-
 
         case types.TOGGLE_USER_EDIT_MODE:
             return {

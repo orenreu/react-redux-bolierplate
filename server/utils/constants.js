@@ -11,12 +11,12 @@ if (process.env.NODE_ENV == "production") {
 
     var constants = {
 
-        ADMIN_EMAIL: 'hello@pornbook.club',
-        SYSTEM_EMAIL: 'hello@pornbook.club',
-        SYSTEM_NAME: 'Porn Book Club',
-        SYSTEM_NAME_SLUG: 'pornbookclub',
-        SYSTEM_URL: 'http://pornbook.club',
-        SMTP_HOST: 'pornbook.club',
+        ADMIN_EMAIL: 'hello@boilerplate.com',
+        SYSTEM_EMAIL: 'hello@boilerplate.com',
+        SYSTEM_NAME: 'Boilerplate',
+        SYSTEM_NAME_SLUG: 'boilerplate',
+        SYSTEM_URL: 'http://boilerplate.com',
+        SMTP_HOST: 'boilerplate',
         SMTP_PASSWORD: 'oren1979',
         CLOUDINARY_NAME: "benzo",
         CLOUDINARY_API_KEY: "776284389836144",
@@ -27,13 +27,13 @@ if (process.env.NODE_ENV == "production") {
 
     var constants = {
 
-        ADMIN_EMAIL: 'hello@pornbook.club',
-        SYSTEM_EMAIL: 'hello@pornbook.club',
-        SYSTEM_NAME: 'Porn Book Club',
-        SYSTEM_NAME_SLUG: 'pornbookclub',
+        ADMIN_EMAIL: 'hello@boilerplate.com',
+        SYSTEM_EMAIL: 'hello@boilerplate.com',
+        SYSTEM_NAME: 'Boilerplate',
+        SYSTEM_NAME_SLUG: 'boilerplate',
         SYSTEM_URL: 'localhost:3000',
-        SMTP_HOST: 'webscopeapp.com',
-        SMTP_HOST: 'pornbook.club',
+        SMTP_HOST: 'boilerplate.com',
+        SMTP_HOST: 'boilerplate.com',
         CLOUDINARY_NAME: "benzo",
         CLOUDINARY_API_KEY: "776284389836144",
         CLOUDINARY_API_SECRET: "rZdGUWjE2VnDkaFNdRMb1IT13eM"

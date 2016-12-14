@@ -23,8 +23,18 @@ router.post('/', upload.single('file'), function (req, res, next) {
     var type = req.body.type
     const file = req.file;
 
-    if(type == "avatar"){
-        return uploadAvatar(file,res)
+    var options;
+
+    switch(type){
+        case avatar:
+            options = {
+                width: 160,
+                height: 160,
+                crop: "fill"
+            }
+        break;
+        default:
+            options = {}
     }
 
     // Grab extension from uploaded file
@@ -33,9 +43,9 @@ router.post('/', upload.single('file'), function (req, res, next) {
 
     // Move the file to uploads folder
     var path = './public/uploads/'+file.filename+"."+extension;
-    fs.rename(file.path, path);
+    fs.rename(file.path, path)
 
-    FileUpload.uploadToCloudinary(path, 540, 400, "fill", function(url){
+    FileUpload.uploadToCloudinary(path, options, function(url){
         res.status(200).send({url: url});
     })
 
@@ -44,42 +54,20 @@ router.post('/', upload.single('file'), function (req, res, next) {
 
 
 
-
-function uploadAvatar(file, res){
-
-    // Grab extension from uploaded file
-    var re = /(?:\.([^.]+))?$/;
-    var extension = re.exec(file.originalname)[1];
-
-    // Move the file to uploads folder
-    var path = './public/uploads/'+file.filename+"."+extension;
-    fs.rename(file.path, path);
-
-    FileUpload.uploadToCloudinary(path, 160, 160, "fill", function(url){
-        res.status(200).send({url: url});
-    })
-
-
-}
-
-
 const FileUpload = {
 
-    uploadToCloudinary: function(path, width, height, crop, callback){
+    uploadToCloudinary: function (path, options, callback) {
 
         // Upload file to cloudinary
         cloudinary.uploader.upload(path, function (result) {
             // Send uploaded image url back
-            var url = result.url
-            callback(url)
+            var url = result.url;
+            callback(url);
 
             // Delete local copy
             fs.unlink(path);
-        }, {
-            width: width,
-            height: height,
-            crop: crop
-        });
+        }, options);
+
     }
 }
 
